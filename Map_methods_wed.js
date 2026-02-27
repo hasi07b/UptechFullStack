@@ -20,18 +20,18 @@
 // }
 
 //....2nd
-let arr2 = [
-  {
-    nameOfstudents: ["haseeb", "hamza", "aqib", "Ali"],
-    depOfstudents: ["cs", "IT", "medical"],
-    marks: ["4.5", "4", "3"],
-  },
-  {
-    headOFcs: " Mehmood",
-    headOFit: " akram",
-    headOFmedical: " ryaz",
-  },
-];
+// let arr2 = [
+//   {
+//     nameOfstudents: ["haseeb", "hamza", "aqib", "Ali"],
+//     depOfstudents: ["cs", "IT", "medical"],
+//     marks: ["4.5", "4", "3"],
+//   },
+//   {
+//     headOFcs: " Mehmood",
+//     headOFit: " akram",
+//     headOFmedical: " ryaz",
+//   },
+// ];
 
 // for (let i = 0; i < arr2.length; i++) {
 //   if (arr2[i].nameOfstudents) {
@@ -51,4 +51,30 @@ let arr2 = [
 //   }
 // });
 
-arr2.map((item) => console.log(item));
+// arr2.map((item) => console.log(item));
+
+/////////////////// 26 feb work on array and object again for better understanding
+let users = [
+  {
+    names: [
+      {
+        namez: "zong",
+        id: "2",
+      },
+    ],
+    nameOfstudents: ["haseeb", "hamza", "aqib", "Ali"],
+    depOfstudents: ["cs", "IT", "medical"],
+    marks: ["4.5", "4", "3"],
+  },
+  {
+    headOFcs: " Mehmood",
+    headOFit: " akram",
+    headOFmedical: " ryaz",
+  },
+];
+// Note : jb bhi hum nay kisi array mai say data lena ha to hum loop ka use kray gay or agr array k andr
+// array majood ho tab bi loop k andr loop lgaiy k inner Element ko get krnay k lyay
+
+for (let i = 0; i <= users.length; i++) {
+  console.log(users[i].names);
+}
