@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating to Do list with dom</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        background-color: antiquewhite;
+    }
+
+    input {
+        width: 200px;
+        padding: 4px;
+        margin: 4px;
+    }
+
+    button {
+        width: 70px;
+        padding: 4px;
+    }
+
+    .pp {
+        border: 1px solid black;
+        margin: 4px 0;
+        padding: 2px;
+        background-color: white;
+    }
+
+    #del {
+        width: 278px;
+
+    }
+</style>
+
+<body>
+    <h1>To Do List </h1>
+    <p>Assign you daily task here</p>
+    <script>
+        let container = document.createElement("div");
+        document.body.appendChild(container);
+        container.style.padding = "6px"
+        // container.style.border = "1px solid black";
+
+        // let heading = document.createElement("h1");
+        // heading.innerHTML = "hi this is me";
+        // container.appendChild(heading);
+        // let para = document.createElement("p")
+        // para.innerText = "Hi im the first para that is created dynamically"
+        // container.appendChild(para)
+
+        let inputTag = document.createElement("input")
+        inputTag.placeholder = "add task";
+        container.appendChild(inputTag)
+
+
+        var btn = document.createElement("button")
+        btn.innerText = "Add"
+        container.appendChild(btn)
+
+        let hV = 0; // bahir initiaze krwaya ta k yay globalywork kray local main icr.. nhi ho ga
+
+        // Method 1:
+        // btn fucntionality 
+        btn.addEventListener("click", () => {
+
+            //if input empty ho ga to kuch add nhi ho ga esay opr rakhna prta ha otherise kam ni krta
+            let inputValue = inputTag.value;
+            if (inputValue.trim() === "") {
+                return;
+            };
+
+            hV++;   // incrementing value
+            let heading2 = document.createElement("h3");
+            heading2.innerHTML = "Task " + hV;
+            container.appendChild(heading2);
+
+            let para2 = document.createElement("p")
+            para2.setAttribute("class", "pp")
+            para2.innerText = inputValue;
+            container.appendChild(para2)
+
+            let deletBtn = document.createElement("button")
+            deletBtn.setAttribute("id", "del");
+            deletBtn.innerText = "Delete"
+            container.appendChild(deletBtn)
+            deletBtn.addEventListener("click", () => {
+                heading2.remove();
+                para2.remove();
+                deletBtn.remove()
+
+
+            })
+            inputTag.value = "";
+            inputTag.focus();
+
+
+        })
+
+        //Mehotd 2:
+        // If ap chahtat k enter press kray tab bi data add ho to ap nay yay kam ek fuction mai krna pray ga like this other wise ap oper wala section use kray jha add btn press krnay say data add hota ha.
+
+        // function addtask() {
+
+        //     //if input empty ho ga to kuch add nhi ho ga esay opr rakhna prta ha otherise kam ni krta
+        //     let inputValue = inputTag.value;
+        //     if (inputValue.trim() === "") {
+        //         return;
+        //     };
+
+        //     hV++;   // incrementing value
+        //     let heading2 = document.createElement("h3");
+        //     heading2.innerHTML = "Task " + hV;
+        //     container.appendChild(heading2);
+
+        //     let para2 = document.createElement("p")
+        //     para2.setAttribute("class", "pp")
+        //     para2.innerText = inputValue;
+        //     container.appendChild(para2)
+
+        //     let deletBtn = document.createElement("button")
+        //     deletBtn.setAttribute("id", "del");
+        //     deletBtn.innerText = "Delete"
+        //     container.appendChild(deletBtn)
+        //     deletBtn.addEventListener("click", () => {
+        //         heading2.remove();
+        //         para2.remove();
+        //         deletBtn.remove()
+
+
+        //     })
+        //     inputTag.value = "";
+        //     inputTag.focus();
+
+
+        // }
+        // btn.addEventListener("click", addtask);
+
+        // // Enter key press fuction "keydown " add krna lazam ha yay triger krta and "e" tell us either they press "Enter" or nay other button so oss kacc phr work hota agay its a call back funcion.
+
+        // inputTag.addEventListener("keydown", function (e) {
+        //     if (e.key === "Enter") {
+        //         addtask();
+        //         e.preventDefault(); // prevent default form behavior if inside form
+        //     }
+        // });
+    </script>
+</body>
+
+</html>
