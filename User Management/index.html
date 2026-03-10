@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+</head>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid black;
+
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .error {
+        color: red;
+    }
+</style>
+
+<body>
+    <h1>User Management System</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr>
+                <td colspan="4">Loading users...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- // Java script code starting -->
+    <script>
+        async function loadUser() {
+            try {
+                let response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+                if (!response.ok) {
+                    throw new Error('API response theek nahi');
+                }
+
+                let users = await response.json();
+                console.log(users)
+
+                const tBody = document.getElementById("tableBody");
+                if (users.length === 0) {
+                    tBody.innerHTML = `<tr><td colspan="4">User Data is Not found</td></tr>`;
+                    return;
+                }
+
+                let allRows = "";
+
+                users.forEach(user => {
+                    allRows += `
+                <tr>
+                    <td>${user.id}</td>
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.address?.city}</td>
+                    </tr>
+                `;
+                })
+
+                tBody.innerHTML = allRows;
+            }
+            catch (error) {
+                console.error('Error:', error);
+                document.getElementById('tableBody').innerHTML =
+                    '<tr><td colspan="4" class="error">Data load nahi ho saka</td></tr>';
+            }
+        }
+        loadUser();
+
+    </script>
+
+</body>
+
+</html>
