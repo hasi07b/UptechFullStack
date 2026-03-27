@@ -14,8 +14,9 @@ function App() {
   return (
     <> 
    <Application />
-   <Counter />
-   <Buttons />
+   {/* <Counter /> */}
+   {/* <Counter /> */}
+   {/* <Buttons /> */}
     </>
   )
 }

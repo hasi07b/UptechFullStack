@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab task</title>
+</head>
+
+<body>
+    <script>
+
+        let container = document.createElement("div");
+        document.body.appendChild(container);
+        container.style.padding = "6px"
+        container.style.border = "1px solid black";
+
+        let heading = document.createElement("h1");
+        heading.innerHTML = "hi this is me";
+        container.appendChild(heading);
+        let para = document.createElement("p")
+        para.innerText = "Hi im the first para that is created dynamically"
+        container.appendChild(para)
+
+        var btn = document.createElement("button")
+        btn.innerText = "Add"
+        container.appendChild(btn)
+
+
+
+        //Creaing a fuction on add button that creates new container dynamically while click
+        btn.addEventListener("click", () => {
+            let container = document.createElement("div");
+            document.body.appendChild(container);
+            container.style.border = " 1px solid red";
+            container.style.margin = "10px 0"
+            container.style.padding = "6px"
+
+            //dynamically creating h1 and p 
+            let heading = document.createElement("h1");
+            heading.innerHTML = "New para in Created";
+            container.appendChild(heading);
+            let para = document.createElement("p")
+            para.innerText = "Hi im the first para that is created dynamically"
+            container.appendChild(para)
+
+            //Created delete button dynamically
+            let btn1 = document.createElement("button")
+            btn1.innerText = "Delete"
+            container.appendChild(btn1)
+
+            //Function created to remove container that is created
+            btn1.addEventListener("click", function () {
+                container.remove();
+            })
+
+        });
+
+        // Second container... Now what happen in this ! yay kam to kr rha ha but es mai button pr press krnay say new container create nhi ho rha bcsos btn pr eventlisner lga ha jo har bar new event create kray ga but unique mean same variable name pr dubara nhi bnaiy ga woh.
+        let container1 = document.createElement("div");
+        document.body.appendChild(container1);
+        container1.style.border = " 1px solid red";
+        container1.style.margin = "10px 0"
+        container1.style.padding = "6px"
+        let heading1 = document.createElement("h1");
+        heading1.innerHTML = "Im container 1";
+        container1.appendChild(heading1);
+        let para1 = document.createElement("p")
+        para1.innerText = "Hi im the first para that is created dynamically"
+        container1.appendChild(para1)
+        var btn = document.createElement("button")
+        btn.innerText = "Add"
+        container1.appendChild(btn)
+
+    </script>
+</body>
+
+</html>

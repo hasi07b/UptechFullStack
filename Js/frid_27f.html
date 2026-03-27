@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Counter and Form</title>
+</head>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+    }
+
+    .fr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* justify-content: center; */
+    }
+</style>
+
+<body>
+    <div class="container"
+        style="height: 30vh; border: 1px solid black; width: 50vh; padding: 10px; margin: 0 auto; border-radius: 4px; align-items: center; justify-content: center; background-color: rgb(231, 167, 167);">
+
+        <h2 class="box" style="border: 2px solid black; width: 200px; padding: 4px;border-radius: 4px;">Initial value is
+            0
+        </h2>
+        <button onclick="addValue()"
+            style="background-color: rgb(28, 95, 118); width: 70px; border-radius: 4px; padding: 4px; color: whitesmoke;">Add</button>
+        <button onclick="deleteValue()"
+            style="background-color: rgb(28, 95, 118); width: 70px; border-radius: 4px; padding: 4px; color: whitesmoke;">Delete</button>
+        <button onclick="resetValue()"
+            style="background-color: rgb(28, 95, 118); width: 70px; border-radius: 4px; padding: 4px; color: whitesmoke;">Reset</button>
+    </div>
+
+    <form action="" style="height: 50vh;border: 1px solid black; border-radius: 4px; padding: 4px; margin: 4px auto; ">
+
+        <div>
+            <h2>Data Entry</h2>
+        </div>
+
+        <div class="fr">
+
+
+            <div>
+                <label for="Name">Name</label>
+                <input type="text" value="" placeholder="Enter You Name Here">
+            </div>
+            <div>
+                <label for="Name">G-mail</label>
+                <input type="text" value="" placeholder="Enter You G-mail">
+            </div>
+            <div>
+                <label for="Name">Password</label>
+                <input type="text" value="" placeholder="Enter You Password">
+            </div>
+        </div>
+        <button onclick="formData()"
+            style="border-radius: 4px ; background-color:rgb(231, 167, 167); width: 100px; margin: 10px; height: 30px;">Submit</button>
+    </form>
+    <script>
+        let count = 0;
+        function addValue() {
+            count++;
+            document.querySelector(".box").textContent = count;
+        }
+        function deleteValue() {
+            count--;
+            document.querySelector(".box").textContent = count;
+        }
+        function resetValue() {
+            count = 0;
+            document.querySelector(".box").textContent = count;
+        }
+
+        //.............formData.................
+        // let nData;
+        // let emailData;
+        // let paddData;
+        let arr =[];
+        function formData(){
+            console.lgo(``)
+        }
+
+
+    </script>
+</body>
+
+</html>
