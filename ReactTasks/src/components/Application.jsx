@@ -28,6 +28,7 @@ const Application = () => {
 
       <Counter count={count} />
       <Buttons count={count} add={add} deleteV={deleteV} />
+      
     </>
   );
 };
