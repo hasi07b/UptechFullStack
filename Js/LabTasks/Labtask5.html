@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Task 5</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(224, 187, 187);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+
+        width: 300px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        /* display: none; */
+        /* hidden at start */
+        transition: transform 0.3s ease;
+    }
+
+    button {
+        margin: 4px;
+        padding: 4px;
+        width: 100px;
+        height: 30px;
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(188, 207, 102);
+
+    }
+</style>
+
+<body>
+    <!-- Lab Task 5 
+• Create the HTML structure: 
+• Create an <img> element to display the image, initially set its style="display:none" so it’s 
+hidden. 
+• Create two buttons: one with the text “Show Image” and another with the text “Hide 
+Image”. 
+• Initially, the "Show Image" button should be visible, while the "Hide Image" button is 
+hidden.  -->
+    <div class="container">
+
+        <div>
+            <h2>Creating Image show and hid button</h2>
+        </div>
+        <div id="pic">
+            <img src="https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?cs=srgb&dl=clouds-cloudy-countryside-236047.jpg&fm=jpg"
+                alt="Nature Image">
+        </div>
+    </div>
+
+    <div>
+        <button onclick="display()" id="showBtn">Display</button>
+        <button onclick="hide()" id="hideBtn">Hide</button>
+    </div>
+
+    <script>
+        const myimage = document.querySelector("img")
+        let btn = document.getElementsByTagName("button")
+
+        // myimage.style.display = "none";
+        function display() {
+            myimage.style.visibility = "visible";
+            show.style.display = "none";
+            hideBtn.style.display = "inline-block";
+        }
+        function hide() {
+            myimage.style.visibility = "hidden";
+            show.style.display = "inline-block";
+            hideBtn.style.display = "none";
+        }
+    </script>
+
+
+
+    <!-- from below we are performing the upper task with addEventListener -->
+    <!-- <div>
+        <button id="hideBtn">Hide</button>
+        <button id="showBtn">Display</button>
+    </div>
+
+    <script>
+        const myimage = document.querySelector("img")
+        const showBtn = document.getElementById("showBtn");
+        const hideBtn = document.getElementById("hideBtn");
+        // myimage.style.display = "none";
+
+        showBtn.addEventListener("click", function () {
+            myimage.style.visibility = "visible";
+            showBtn.style.display = "none";
+            hideBtn.style.display = "inline-block";
+        });
+
+        hideBtn.addEventListener("click", function () {
+            myimage.style.visibility = "hidden";
+            showBtn.style.display = "inline-block";
+            hideBtn.style.display = "none";
+        }); -->
+
+
+    </script>
+
+
+    <!-- Write the Javascript Code for: 
+• When the user clicks the “Show Image” button, the image will become visible and the 
+“Show Image” button will be hidden -->
+
+
+
+</body>
+
+</html>
