@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Tasks Solution</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Open Console to See Output</h2>
+
+<script>
+
+//////////////////////////////////////////////////////////
+// Task 1: Student Introduction
+//////////////////////////////////////////////////////////
+
+// Answer:
+let uName = "Hassan";
+let uAge = 20;
+let stuFlag = true;
+
+console.log("My name is " + uName + ". I am " + uAge + " years old. Student: " + stuFlag);
+
+
+//////////////////////////////////////////////////////////
+// Task 2: Data Type Checker
+//////////////////////////////////////////////////////////
+
+// Answer:
+let strVal = "Hello";
+let numVal = 100;
+let boolVal = true;
+let undefVal;
+let nullVal = null;
+
+console.log(typeof strVal);
+console.log(typeof numVal);
+console.log(typeof boolVal);
+console.log(typeof undefVal);
+console.log(typeof nullVal);
+
+
+//////////////////////////////////////////////////////////
+// Task 3: Simple Calculator
+//////////////////////////////////////////////////////////
+
+// Answer:
+let n1 = 10;
+let n2 = 5;
+
+console.log("Add:", n1 + n2);
+console.log("Sub:", n1 - n2);
+console.log("Mul:", n1 * n2);
+console.log("Div:", n1 / n2);
+
+
+//////////////////////////////////////////////////////////
+// Task 4: Temperature Converter
+//////////////////////////////////////////////////////////
+
+// Answer:
+let cTemp = 25;
+let fTemp = (cTemp * 9/5) + 32;
+
+console.log("C:", cTemp);
+console.log("F:", fTemp);
+
+
+//////////////////////////////////////////////////////////
+// Task 5: Even or Odd
+//////////////////////////////////////////////////////////
+
+// Answer:
+let chkNum = 7;
+
+if (chkNum % 2 === 0) {
+  console.log("Even");
+} else {
+  console.log("Odd");
+}
+
+
+//////////////////////////////////////////////////////////
+// Task 6: Grade Checker
+//////////////////////////////////////////////////////////
+
+// Answer:
+let marks = 85;
+
+if (marks >= 90) {
+  console.log("Grade: A");
+} else if (marks >= 80) {
+  console.log("Grade: B");
+} else if (marks >= 70) {
+  console.log("Grade: C");
+} else if (marks >= 60) {
+  console.log("Grade: D");
+} else {
+  console.log("Grade: Fail");
+}
+
+
+//////////////////////////////////////////////////////////
+// Task 7: Age Eligibility
+//////////////////////////////////////////////////////////
+
+// Answer:
+let ageChk = 17;
+
+if (ageChk >= 18) {
+  console.log("You can vote");
+} else {
+  console.log("You cannot vote");
+}
+
+
+//////////////////////////////////////////////////////////
+// Task 8: Print Numbers 1–10
+//////////////////////////////////////////////////////////
+
+// Answer:
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+
+
+//////////////////////////////////////////////////////////
+// Task 9: Multiplication Table
+//////////////////////////////////////////////////////////
+
+// Answer:
+let tblNum = 5;
+
+for (let j = 1; j <= 10; j++) {
+  console.log(tblNum + " x " + j + " = " + (tblNum * j));
+}
+
+</script>
+
+</body>
+</html>
