@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rocket Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            background: #e5e5e5;
+        }
+
+        /* NAV */
+        .navWrap {
+            background: #dcdcdc;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #999;
+        }
+
+        .logoTxt {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navLinks a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: black;
+            border: 1px solid black;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        /* HERO (UPDATED WITH YOUR IMAGE) */
+        .heroBox {
+            height: 400px;
+            background: url('penguine.jpg') no-repeat center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .heroText h1 {
+            font-size: 60px;
+            letter-spacing: 3px;
+        }
+
+        .heroText p {
+            font-size: 24px;
+        }
+
+        /* FEATURES */
+        .featWrap {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            background: #eee;
+            text-align: center;
+        }
+
+        .featCard {
+            width: 25%;
+        }
+
+        .circleIcon {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #666;
+            border-radius: 50%;
+            margin: auto;
+            margin-bottom: 15px;
+
+            /* using same image */
+            background: url('penguine.jpg') center/cover;
+        }
+
+        /* BLUE SECTION */
+        .blueBox {
+            background: #1ea4b8;
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .blueInner {
+            border: 1px solid white;
+            padding: 20px;
+            width: 60%;
+            margin: auto;
+        }
+
+        .blueBtn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: 1px solid white;
+            background: transparent;
+            color: white;
+        }
+
+        /* TEAM */
+        .teamWrap {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .teamCards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .cardBox {
+            background: white;
+            width: 150px;
+            padding-bottom: 10px;
+        }
+
+        .avatar {
+            height: 120px;
+
+            /* using same image */
+            background: url('penguine.jpg') center/cover;
+        }
+
+        .cardBtn {
+            margin-top: 5px;
+            padding: 5px;
+            background: black;
+            color: white;
+            border: none;
+            width: 100%;
+        }
+
+        /* CTA */
+        .ctaWrap {
+            background: #1ea4b8;
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .ctaInner {
+            border: 1px solid white;
+            padding: 20px;
+            width: 60%;
+            margin: auto;
+        }
+
+        /* FOOTER */
+        .footWrap {
+            background: #ddd;
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <div class="navWrap">
+        <div class="logoTxt">Rocket.</div>
+        <div class="navLinks">
+            <a href="#">HOME</a>
+            <a href="#">BLOG</a>
+            <a href="#">CONTACT</a>
+            <a href="#">ADMIN</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="heroBox">
+        <div class="heroText">
+            <h1>BUT WHY? PENGUIN</h1>
+            <p>LOREM IPSUM</p>
+        </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="featWrap">
+        <div class="featCard">
+            <div class="circleIcon"></div>
+            <h4>EASY TO EDIT</h4>
+        </div>
+
+        <div class="featCard">
+            <div class="circleIcon"></div>
+            <h4>LAYERED PSD</h4>
+        </div>
+
+        <div class="featCard">
+            <div class="circleIcon"></div>
+            <h4>READY TO GO</h4>
+        </div>
+    </div>
+
+    <!-- BLUE -->
+    <div class="blueBox">
+        <div class="blueInner">
+            <h3>LOREM IPSUM DOLOR SIT AMET</h3>
+            <button class="blueBtn">Lorem ipsum</button>
+        </div>
+    </div>
+
+    <!-- TEAM -->
+    <div class="teamWrap">
+        <h3>LOREM IPSUM DOLOR SIT AMET</h3>
+
+        <div class="teamCards">
+            <div class="cardBox">
+                <div class="avatar"></div>
+                <p>JOHN DOE</p>
+                <button class="cardBtn">Get Started</button>
+            </div>
+
+            <div class="cardBox">
+                <div class="avatar"></div>
+                <p>JOHN DOE</p>
+                <button class="cardBtn">Get Started</button>
+            </div>
+
+            <div class="cardBox">
+                <div class="avatar"></div>
+                <p>JOHN DOE</p>
+                <button class="cardBtn">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="ctaWrap">
+        <div class="ctaInner">
+            <h3>HEARD ENOUGH?</h3>
+            <button class="blueBtn">Lorem ipsum</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footWrap">
+        <div>© 2014 Company</div>
+        <div>About | Team | Careers</div>
+        <div>Privacy | Terms</div>
+    </div>
+
+</body>
+
+</html>
